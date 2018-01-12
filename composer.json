@@ -1,0 +1,12 @@
+{
+  "name":"pvashchu/328/routing-demo",
+  "authors":[
+    {
+      "name":"Pavel Vashchuk",
+      "email":"pvashchuk@mail.greenriver.edu"
+    }
+  ],
+  "require":{
+    "bcosca/fatfree-core":"dev-master"
+  }
+}
