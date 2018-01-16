@@ -34,6 +34,21 @@ $f3->route("GET /hello/@name", function($f3, $params) {
 );
 
 //define a route using parameters
+$f3->route("GET /hi/@first/@last", function($f3, $params) {
+    //$name = $params['name'];
+    //echo "<h1>Hello, $name</h1>";
+
+    //adding variables to the 'hive' (saving it to usse from the template"
+    $f3->set('first', $params['first']);
+    $f3->set('last', $params['last']);
+    $f3->set('message', 'hi');
+
+    $template = new Template();
+    echo $template->render('views/hi.html');
+}
+);
+
+//define a route using parameters
 $f3->route("GET /language/@lang", function($f3, $params) {
 
     switch ($params['lang']) {
