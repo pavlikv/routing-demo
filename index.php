@@ -21,15 +21,10 @@ $f3->route("GET /", function() {
 }
 );
 
-//define a page1 route
-$f3->route("GET /page1", function() {
-    echo '<h1>This is page 1</h1>';
-}
-);
-
 //define a page1, subpage a route
-$f3->route("GET /page1/subpage-a", function() {
-    echo '<h1>This is page 1, subpage a</h1>';
+$f3->route("GET /jewelry/rings/toe-rings", function() {
+    $template = new Template();
+    echo $template->render('views/toe-rings.html');
 }
 );
 
